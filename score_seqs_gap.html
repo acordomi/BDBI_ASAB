@@ -34,14 +34,16 @@
 -->
 
 <h2>Tests</h2>
-  <pre>    >>> score_seqs("THEFASTCAT", "THEFATCAT ", 1, -1, 0)
+  <pre>    >>> score_seqs("THEFASTCAT", "THEFATCAT-", 1, -1, -2)
+    -1
+    >>> score_seqs("THEFASTCAT", "THEFATCA-T", 1, -1, -2)
     1
-    >>> score_seqs("THEFASTCAT", "THEFATCA T", 1, -1, 0)
-    3
-    >>> score_seqs_gap("THEFA TCAT", "THEFASTCAT", 1, -1, 0)
-    9
-    >>> score_seqs_gap("THEFASTCAT", "THE", 1, -1, 0)
+    >>> score_seqs("THEFA-TCAT", "THEFASTCAT", 1, -1, -2)
+    7
+    >>> score_seqs("THEFASTCAT", "THE", 1, -1, -2)
     0
+    >>> score_seqs("THE-FASTCAT", "THE-FASTCAT", 1, -1, -2)
+    11
 </pre >
 
   <hr>
