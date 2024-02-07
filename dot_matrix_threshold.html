@@ -21,7 +21,8 @@
   
   <h2>Description</h2>
   <p> Modify <b>dot_matrix(seq1, seq2)</b> function to implement a threshold (add a fourth parameter). Dot should appear ONLY at the first character of a match. 
-    When implementing the window, assume there are no inversions (diagonals always go downhill). When no window size is specified the result should be as if there was no window.
+    When implementing the window, assume there are no inversions (diagonals always go downhill).
+     When no window and threshold are specified the result should be as if there was no window.
     </p>
 
  
@@ -42,7 +43,7 @@
     >>> dot_matrix("FASTCAT", "FATRAT")
     [['o', ' ', ' ', ' ', ' ', ' ', ' '], [' ', 'o', ' ', ' ', ' ', 'o', ' '], [' ', ' ', ' ', 'o', ' ', ' ', 'o'], [' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', 'o', ' ', ' ', ' ', 'o', ' '], [' ', ' ', ' ', 'o', ' ', ' ', 'o']]
     >>> dot_matrix("FASTCAT", "FATRAT", 2, 4)
-    A threshold smaller or equal than the window does not make sense
+    A threshold larger or equal than the window does not make sense
     """</pre >
 
   <hr>
