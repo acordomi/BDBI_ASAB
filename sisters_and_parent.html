@@ -17,20 +17,17 @@
 
 
 <body>
-  <h1>kmers</h1>
+  <h1>sisters_and_parent</h1>
   
   <h2>Description</h2>
-  <p>Write a function that returns a list with all the words of lenght k contained in the query.
+  <p>Return a list with tuples that join both sister leaves with its parent (including, the word right/left/parent), the node id and the name (only for leaves). See the test.
 </p>
 
  
 <h2>Tests</h2>
-  <pre>    >>> kmers("QLNFQLMSAGQLQ", 3)
-    ['QLN', 'LNF', 'NFQ', 'FQL', 'QLM', 'LMS', 'MSA', 'SAG', 'AGQ', 'GQL', 'QLQ']
-    >>> kmers("QLNFQLMSAGQLQ", 4)
-    ['QLNF', 'LNFQ', 'NFQL', 'FQLM', 'QLMS', 'LMSA', 'MSAG', 'SAGQ', 'AGQL', 'GQLQ']
-    
-</pre >
+  <pre>    >>> sisters_and_parent(newick_file2nodes("tree_abcdef.dnd"))
+    [(('left', 5, 'B'), ('right', 4, 'A'), ('parent', 3)), (('left', 8, 'D'), ('right', 7, 'C'), ('parent', 6)), (('left', 11, 'F'), ('right', 10, 'E'), ('parent', 9))]
+  </pre >
 
   <hr>
 

@@ -25,14 +25,23 @@
 </p>
 
 <h2>Hint</h2>
-<p>You can open the fasta file using Biopython
+<p>
+
+You may use Seq.reverse_complement() method from Biopython. Also in Biopython,
+the following dictionary contains all conversions from codons to amino acids:
+
+<pre>
+from Bio.Data import CodonTable
+codon2aa = CodonTable.unambiguous_dna_by_name["Standard"].forward_table
+</pre>
+
 </p>
 <pre>from Bio import SeqIO
 SeqIO.parse(filename, "fasta")
 </pre >
 
 <h2>Tests</h2>
-  <pre>>>> dna2allprots('AGTCGATGCACACGATCGATGCATCGATATCGTATATCCGATACCCCGTAC')
+  <pre>    >>> dna2allprots('AGTCGATGCACACGATCGATGCATCGATATCGTATATCCGATACCCCGTAC')
     ['SRCTRSMHRYRISDTPY', 'VDAHDRCIDIVYPIPR', 'SMHTIDASISYIRYPV', 'VRGIGYTISMHRSCAST', 'YGVSDIRYRCIDRVHR', 'TGYRIYDIDASIVCID']
    </pre >
 

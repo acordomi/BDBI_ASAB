@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Exercise</title>
+  <style>
+    p {
+        font-size: 18px
+    }
+    pre {
+        font-size: 16px
+    }
+    .long {
+        overflow-wrap: break-word;
+    }    
+  </style>
+</head>
+
+
+<body>
+  <h1>msa</h1>
+  
+  <h2>Description</h2>
+  <p> And finaly, the MSA! We just need to merge all the pieces to get a progressive 
+    multiple sequence alignment. Start by copying your function <b>node2splits</b>. You will need to do a few modifications:
+    1) name it node2splits_align(), 2) add two additional objects: seqs (a dictionary from fasta2dict) and gep,
+    3) be sure to call <b>align_profiles</b>.
+
+    For the testing you require <a href="hmgb.dnd">hmgb.dnd</a> and <a href="hmgb.fasta">hmgb.fasta</a>.
+
+
+</p>
+
+<h2>Hint</h2>
+<p> Use tree_nodes and some of your previous functions.
+</p>
+<pre>
+from tree_nodes import *
+from fasta2dict import fasta2dict
+from align_profiles_names import align_profiles
+</pre >
+
+<h2>Tests</h2>
+  <pre>
+    >>> node2splits_align(1, newick_file2nodes("hmgb.dnd"), fasta2dict("hmgb.fasta"), -4)
+    ['hmgt_mouse', 'hmgl_trybr', 'hmgl_wheat', 'hmgb_chite']
+    >>> node2splits_align(2, newick_file2nodes("hmgb.dnd"), fasta2dict("hmgb.fasta"), -4)
+    ['hmgl_wheat', 'hmgb_chite']
+    >>> node2splits_align(6, newick_file2nodes("hmgb.dnd"), fasta2dict("hmgb.fasta"), -4)
+    ['hmgl_trybr', 'hmgl_wheat', 'hmgb_chite']
+</pre >
+
+  <hr>
+
+  <p><a href="index.html">Back to index</a></p>
+  <br>
+    <!--
+  <h3>Related exercises:</h3>
+  <p><a href="print_fasta_oneseq.html">print_fasta_oneseq</a></p>
+  <p><a href="read_fasta_oneline.html">read_fasta_oneline</a></p>
+-->
+</body>
+</html>

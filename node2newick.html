@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Exercise</title>
+  <style>
+    p {
+        font-size: 18px
+    }
+    pre {
+        font-size: 16px
+    }
+    .long {
+        overflow-wrap: break-word;
+    }    
+  </style>
+</head>
+
+
+<body>
+  <h1>node_to_newick</h1>
+  
+  <h2>Description</h2>
+  <p>Print a tree in Newick format from a nodes dictionary.
+     The writting can be recursive (this is the easiest solution). 
+     You should open a parenthesis the first time you visit a node,
+      separate the left and the right subtrees with a comma 
+      and close the parenthesis when you are done displaying the right group.
+       In recursive terms, it means you open a parenthesis when entering the node,
+        the function then calls itself to explore the left side and emits a list 
+        when coming back from this exploration, you insert a coma, the function 
+        calls itself again to explore the right side to emit another list, 
+        and close the parentesis.
+</p>
+
+<h2>Tests</h2>
+  <pre>
+    >>> node2newick(1, newick_file2nodes("tree_abcdef.dnd"))
+    ((F:0.000000,E:0.000000):0.000000,((D:0.000000,C:0.000000):0.000000,(B:0.000000,A:0.000000):0.000000):0.000000):0.000000
+  </pre >
+
+  <hr>
+
+  <p><a href="index.html">Back to index</a></p>
+  <br>
+    <!--
+  <h3>Related exercises:</h3>
+  <p><a href="print_fasta_oneseq.html">print_fasta_oneseq</a></p>
+  <p><a href="read_fasta_oneline.html">read_fasta_oneline</a></p>
+-->
+</body>
+</html>

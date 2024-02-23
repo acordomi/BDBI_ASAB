@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Exercise</title>
+  <style>
+    p {
+        font-size: 18px
+    }
+    pre {
+        font-size: 16px
+    }
+    .long {
+        overflow-wrap: break-word;
+    }    
+  </style>
+</head>
+
+
+<body>
+  <h1>node2leaves</h1>
+  
+  <h2>Description</h2>
+  <p>Return a list with the names of all leaves that can be reached from a node i_node.
+    The function should call itself in a recursive way. The idea is to start
+    exploring left then rigth. Takes as input the node id to start
+    the recursion, a dictionary of nodes and the list of leaves which initially should be emtpy.
+</p>
+
+ 
+<h2>Tests</h2>
+  <pre>    >>> node2leaves(1, newick_file2nodes("tree_abcdef.dnd"), [])
+    ['F', 'E', 'D', 'C', 'B', 'A']
+    >>> node2leaves(2, newick_file2nodes("tree_abcdef.dnd"), [])
+    ['D', 'C', 'B', 'A']
+    >>> node2leaves(3, newick_file2nodes("tree_abcdef.dnd"), [])
+    ['B', 'A']
+    >>> node2leaves(4, newick_file2nodes("tree_abcdef.dnd"), [])
+    ['A']
+    >>> node2leaves(5, newick_file2nodes("tree_abcdef.dnd"), [])
+    ['B']
+    >>> node2leaves(6, newick_file2nodes("tree_abcdef.dnd"), [])
+    ['D', 'C']
+    >>> node2leaves(7, newick_file2nodes("tree_abcdef.dnd"), [])
+    ['C']
+    >>> node2leaves(8, newick_file2nodes("tree_abcdef.dnd"), [])
+    ['D']
+    >>> node2leaves(9, newick_file2nodes("tree_abcdef.dnd"), [])
+    ['F', 'E']
+    >>> node2leaves(10, newick_file2nodes("tree_abcdef.dnd"), [])
+    ['E']
+    >>> node2leaves(11, newick_file2nodes("tree_abcdef.dnd"), [])
+    ['F']  </pre >
+
+  <hr>
+
+  <p><a href="index.html">Back to index</a></p>
+  <br>
+    <!--
+  <h3>Related exercises:</h3>
+  <p><a href="print_fasta_oneseq.html">print_fasta_oneseq</a></p>
+  <p><a href="read_fasta_oneline.html">read_fasta_oneline</a></p>
+-->
+</body>
+</html>

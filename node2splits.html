@@ -17,20 +17,26 @@
 
 
 <body>
-  <h1>kmers</h1>
+  <h1>node2splits</h1>
   
   <h2>Description</h2>
-  <p>Write a function that returns a list with all the words of lenght k contained in the query.
+  <p>This function should call itself in a recursive way. The idea is to start
+    exploring left then rigth. Takes as input the node id to start
+    the recursion, a dictionary of nodes. The function should 1) print the left and right lists and 
+    2) return the concatenation of both lists.
 </p>
 
  
 <h2>Tests</h2>
-  <pre>    >>> kmers("QLNFQLMSAGQLQ", 3)
-    ['QLN', 'LNF', 'NFQ', 'FQL', 'QLM', 'LMS', 'MSA', 'SAG', 'AGQ', 'GQL', 'QLQ']
-    >>> kmers("QLNFQLMSAGQLQ", 4)
-    ['QLNF', 'LNFQ', 'NFQL', 'FQLM', 'QLMS', 'LMSA', 'MSAG', 'SAGQ', 'AGQL', 'GQLQ']
-    
-</pre >
+  <pre>
+    >>> node2splits(1, newick_file2nodes("tree_abcdef.dnd"))
+    ['F'] ['E']
+    ['D'] ['C']
+    ['B'] ['A']
+    ['D', 'C'] ['B', 'A']
+    ['F', 'E'] ['D', 'C', 'B', 'A']
+    ['F', 'E', 'D', 'C', 'B', 'A']
+  </pre >
 
   <hr>
 
