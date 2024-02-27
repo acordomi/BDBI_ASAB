@@ -44,6 +44,8 @@ subst_mat = substitution_matrices.load("BLOSUM62")
     (10.0, 'THEFASTCAT', 'THE---R-AT')
     >>> nw('THERAT', 'THEFASTCAT', -4)
     (10.0, 'THE---R-AT', 'THEFASTCAT')
+    >>> nw('T', 'FAST', -1)
+    (2.0, '---T', 'FAST')
     </pre>
 
   <hr>
