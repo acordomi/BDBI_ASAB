@@ -21,7 +21,7 @@
   
   <h2>Description</h2>
   <p> Makes a profile alignment of two groups of aligned sequences. Sequences should be provided as dictionaries,
-     as created by fasta2dict(). Use a BLOSUM 62 and provide the gep as a parameter. 
+     as created by <a href="fasta2dict.html">fasta2dict()</a>. Use a BLOSUM 62 and provide the gep as a parameter. 
      For the testing you require <a href="cats.fasta">cats.fasta</a> and <a href="rats.fasta">rats.fasta</a>.
 </p>
 
@@ -38,7 +38,7 @@ from fasta2dict import fasta2dict
 <h2>Tests</h2>
   <pre>
     >>> align_profiles(fasta2dict('cats.fasta'), fasta2dict('rats.fasta'), -4)
-    (10.25, {'FAST_CAT': 'thefastcat', 'FAT_CAT': 'a--fa-tcat', 'LAST_RAT': 'a--ra-t---', 'FAT_RAT': 'thera-t--s'})
+    (10.25, {'FAST_CAT': 'thefastcat', 'FAT_CAT': 'a--fa-tcat', 'A_RAT': 'a--ra-t---', 'THE_RATS': 'thera-t--s'})
   </pre >
 
   <hr>

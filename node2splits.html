@@ -20,9 +20,11 @@
   <h1>node2splits</h1>
   
   <h2>Description</h2>
-  <p>This function should call itself in a recursive way. The idea is to start
-    exploring left then rigth. Takes as input the node id to start
-    the recursion, a dictionary of nodes. The function should 1) print the left and right lists and 
+  <p>Here you will have to write a function somehow similar to <b>node2leaves()</b>. 
+    The function takes the same arguments as node2leaves(), 
+    but should return the order in which the sequences should
+     be aligned in pairs according to the provided tree.
+    This function should also call itself in a recursive way. It should 1) print the left and the right lists and 
     2) return the concatenation of both lists.
 </p>
 
@@ -36,6 +38,11 @@
     ['D', 'C'] ['B', 'A']
     ['F', 'E'] ['D', 'C', 'B', 'A']
     ['F', 'E', 'D', 'C', 'B', 'A']
+    >>> node2splits(1, newick_file2nodes("hmgb.dnd"))
+    ['hmgl_wheat'] ['hmgb_chite']
+    ['hmgl_trybr'] ['hmgl_wheat', 'hmgb_chite']
+    ['hmgt_mouse'] ['hmgl_trybr', 'hmgl_wheat', 'hmgb_chite']
+    ['hmgt_mouse', 'hmgl_trybr', 'hmgl_wheat', 'hmgb_chite']
   </pre >
 
   <hr>

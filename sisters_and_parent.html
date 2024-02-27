@@ -20,14 +20,26 @@
   <h1>sisters_and_parent</h1>
   
   <h2>Description</h2>
-  <p>Return a list with tuples that join both sister leaves with its parent (including, the word right/left/parent), the node id and the name (only for leaves). See the test.
+  <p>Now that you know how to print all leaves in a tree, write a function that
+    takes a dictionary of nodes as provided by <b>newick_file2nodes()</b> function in <a href="tree_nodes.py">tree_nodes.py</a> and
+     returns a list with tuples that join both sister leaves with its parent 
+     (including, the word right/left/parent), the node id and the name (only for leaves). See the tests.
+     For the testing you will need <a href="tree_abcdef.dnd">tree_abcdef.dnd</a> and <a href="hmgb.dnd">hmgb.dnd</a>. 
 </p>
 
+<h2>Hint</h2>
+<p>Import everything from tree_nodes.py
+</p>
+<pre>from tree_nodes import *
+</pre>
  
 <h2>Tests</h2>
-  <pre>    >>> sisters_and_parent(newick_file2nodes("tree_abcdef.dnd"))
+  <pre>
+    >>> sisters_and_parent(newick_file2nodes("tree_abcdef.dnd"))
     [(('left', 5, 'B'), ('right', 4, 'A'), ('parent', 3)), (('left', 8, 'D'), ('right', 7, 'C'), ('parent', 6)), (('left', 11, 'F'), ('right', 10, 'E'), ('parent', 9))]
-  </pre >
+    >>> sisters_and_parent(newick_file2nodes("hmgb.dnd"))
+    [(('left', 7, 'hmgt_mouse'), ('right', 6, ''), ('parent', 1)), (('left', 4, 'hmgl_wheat'), ('right', 3, 'hmgb_chite'), ('parent', 2)), (('left', 5, 'hmgl_trybr'), ('right', 2, ''), ('parent', 6))]
+    </pre >
 
   <hr>
 

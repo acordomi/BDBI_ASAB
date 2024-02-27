@@ -20,12 +20,13 @@
   <h1>fasta2words</h1>
   
   <h2>Description</h2>
-  <p>Write a function that reads a fasta file and generates, a dictionary with the sequence_id as keys and an alphabetically sorted list of words of length k as values.
+  <p>Write a function that takes a FASTA file and a word length (k) and generates a dictionary with the sequence ids as the keys
+     and an alphabetically sorted list of words of length k as values.
     For the testing you require <a href="thefastcat.fasta">thefastcat.fasta</a> and <a href="protein_database.fasta">protein_database.fasta</a> 
 </p>
 
 <h2>Hint</h2>
-<p>You can open the fasta file using Biopython
+<p>You can open FASTA files using Biopython
 </p>
 <pre>from Bio import SeqIO
 SeqIO.parse(filename, "fasta")

@@ -20,14 +20,15 @@
   <h1>compare_words</h1>
   
   <h2>Description</h2>
-  <p>Write a function that reads two fasta files, one with a single sequence and another with many (it will act as a database). 
-    Score the sequence in the first file file with all sequences in the second. The score should be the sum of the individual 
-    scores of all word of length k with a threshold t using a BLOSUM62 substitution matrix. You may reuse your function <b>fasta2words</b>.
+  <p>Write a function that reads two FASTA files, one with a single sequence and another with many sequences
+     (it will act as the database). 
+    Score the sequence in the first file agains all sequences in the second. The score should be the sum of the individual 
+    scores of all word of length k with a threshold t using a BLOSUM62 substitution matrix. You may call your function <a href=fasta2words.html>fasta2words</a>.
     For the testing you require <a href="SGMR2.fasta">SGMR2.fasta</a> and <a href="protein_database.fasta">protein_database.fasta</a>.    
 </p>
 
 <h2>Hint</h2>
-<p>You can open the fasta files using Biopython
+<p>You can open the FASTA files using Biopython
 </p>
 <pre>from Bio import SeqIO
 SeqIO.parse(filename, "fasta")

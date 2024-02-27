@@ -20,16 +20,26 @@
   <h1>leaves</h1>
   
   <h2>Description</h2>
-  <p>Figure out how to to print leaves. A leaf is a node with no descendants. 
-    Write a function that returns a list of tuples containing the node id and
-     the name of the leaves in the tree.
+  <p>Figure out how to to print all leaves in a tree. A leaf is a node with no descendants. 
+    Write a function that takes a dictionary of nodes as provided by <b>newick_file2nodes()</b> function in <a href="tree_nodes.py">tree_nodes.py</a>
+     and returns a list of tuples containing the node id and
+     the name for all leaves in the tree. For the testing you will need <a href="tree_abcdef.dnd">tree_abcdef.dnd</a> and <a href="hmgb.dnd">hmgb.dnd</a> .
 </p>
 
+<h2>Hint</h2>
+<p>Import everything from tree_nodes.py
+</p>
+<pre>from tree_nodes import *
+</pre>
  
 <h2>Tests</h2>
   <pre>    >>> leaves(newick_file2nodes("tree_abcdef.dnd"))
     [(4, "A"), (5, "B"), (7, "C"), (8, "D"), (10, "E"), (11, "F")]
+    >>> leaves(newick_file2nodes("hmgb.dnd"))
+    [(3, 'hmgb_chite'), (4, 'hmgl_wheat'), (5, 'hmgl_trybr'), (7, 'hmgt_mouse')]
 </pre >
+
+
 
   <hr>
 
