@@ -1,2 +1,3 @@
 *.py
 !tree_nodes.py
+__pycache__/*
