@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Exercise</title>
+  <style>
+    p {
+        font-size: 18px
+    }
+    pre {
+        font-size: 16px
+    }
+    .long {
+        overflow-wrap: break-word;
+    }    
+  </style>
+</head>
+
+
+<body>
+  <h1>show_substmat_difs</h1>
+  
+  <h2>Description</h2>
+  <p> Create a function that returns a list of tuples with pairs of amino acids and the non-zero difference in the substitution scores. 
+The output should be sorted by absolute difference. In case of positive and negative values for the same value, 
+ positive numbers go first and negative second (i.e. a possible order could be 4, -4, 3, -3, 2, -2 ...). See tests. 
+ Compare the <a href="blosum62_half.mat">BLOSUM62</a> and the <a href="blosum45_half.mat">BLOSUM45</a> matrices.
+</p>
+
+
+<h2>Hint</h2>
+<p> The data that you want to display is the following and in this order (though in a different format) </p>
+<pre><code>
+    F F 2
+    F H 2
+    M M 2
+    C C 1
+    D D 1
+    D N 1
+    E N 1
+    G D 1
+    G R 1
+    H D 1
+    I I 1
+    L L 1
+    M E 1
+    M I 1
+    M L 1
+    V I 1
+    V L 1
+    V M 1
+    V V 1
+    V W 1
+    W I 1
+    W W 1
+    Y Y 1
+    F D -1
+    F M -1
+    I D -1
+    M A -1
+    T T -1
+    V D -1
+    W D -1
+    W F -1
+</code></pre>
+
+
+<h2>Tests</h2>
+  <pre>
+    >>> show_substmat_difs("blosum62_half.mat", "blosum45_half.mat")
+    [('F', 'F', 2), ('F', 'H', 2), ('M', 'M', 2), ('C', 'C', 1), ('D', 'D', 1), ('D', 'N', 1), ('E', 'N', 1), ('G', 'D', 1), ('G', 'R', 1), ('H', 'D', 1), ('I', 'I', 1), ('L', 'L', 1), ('M', 'E', 1), ('M', 'I', 1), ('M', 'L', 1), ('V', 'I', 1), ('V', 'L', 1), ('V', 'M', 1), ('V', 'V', 1), ('V', 'W', 1), ('W', 'I', 1), ('W', 'W', 1), ('Y', 'Y', 1), ('F', 'D', -1), ('F', 'M', -1), ('I', 'D', -1), ('M', 'A', -1), ('T', 'T', -1), ('V', 'D', -1), ('W', 'D', -1), ('W', 'F', -1)]
+</pre >
+
+  <hr>
+
+  <br>
+<!--
+  <h3>Related exercises:</h3>
+  <p><a href="count_matches_stars.html">count_matches_stars</a></p>
+  -->
+</body>
+</html>

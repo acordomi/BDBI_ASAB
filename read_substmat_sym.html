@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Exercise</title>
+  <style>
+    p {
+        font-size: 18px
+    }
+    pre {
+        font-size: 16px
+    }
+    .long {
+        overflow-wrap: break-word;
+    }    
+  </style>
+</head>
+
+
+<body>
+  <h1>read_substmat_sym</h1>
+  
+  <h2>Description</h2>
+  <p> Modify the <b>read_substmat()</b> function again so that it still reads files in the <a href="blosum62_half.mat">half matrix format</a>,
+     but it returns a dictionary of dictionaries that allows to look up for the substitiution scores in both directions (i.e. [A][B] and [B][A]).  
+</p>
+<!--
+
+<h2>Hint</h2>
+<pre><code>
+</code></pre>
+-->
+
+<h2>Tests</h2>
+  <pre>
+    >>> smat = read_substmat('blosum62_half.mat')
+    >>> smat['W']['W']
+    11
+    >>> len(smat)
+    20
+    >>> len(smat['L'])
+    20
+    >>> smat['W']['A']
+    -3
+    >>> 'W' in smat['A']
+    True
+</pre >
+
+  <hr>
+
+  <br>
+<!--
+  <h3>Related exercises:</h3>
+  <p><a href="count_matches_stars.html">count_matches_stars</a></p>
+  -->
+</body>
+</html>

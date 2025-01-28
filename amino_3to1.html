@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Exercise</title>
+  <style>
+    p {
+        font-size: 18px
+    }
+    pre {
+        font-size: 16px
+    }    
+  </style>
+</head>
+
+
+<body>
+  <h1>amino_3to_1</h1>
+  
+  <h2>Description</h2>
+  <p> Write a function that reads a protein sequence in thee-letter-code format and returns the
+    same sequence in one-letter-code format. The sequence passed can be in upper or lower case, but and always separated by '-'.
+    Here you can find the <a href="aminos.txt">conversion table</a>). Write an additional function <b>read_aminos(xxx)</b> that read the file with the conversions and returns a dictionary.
+
+  <h2>Tests</h2>
+  <pre>
+    >>> len(read_aminos("aminos.txt"))
+    20
+    >>> read_aminos("aminos.txt")["ALA"]
+    'A'
+    
+    >>> amino_3to1('Ala-Phe-Gly-Ala-Gly-Phe')
+    'AFGAGF'
+    >>> amino_3to1('ALA-PHE-GLY-ALA-GLY-PHE')
+    'AFGAGF'
+    >>> amino_3to1('ala-phe-gly-ala-gly-phe')
+    'AFGAGF'
+    >>> amino_3to1('ala_phe_gly_ala_gly_phe')
+    >>> amino_3to1('')
+    """
+</pre >
+
+  <hr>
+
+  
+     <!--
+  <p>Related exercises:</p>
+  <ul>
+    <li><a href="dna2rna.html">dna2rna</a></li>
+  </ul>
+-->
+  
+</body>
+</html>

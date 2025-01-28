@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Exercise</title>
+  <style>
+    p {
+        font-size: 18px
+    }
+    pre {
+        font-size: 16px
+    }
+    .long {
+        overflow-wrap: break-word;
+    }    
+  </style>
+</head>
+
+
+<body>
+  <h1>seq_identity</h1>
+  
+  <h2>Description</h2>
+  <p> Create a function that returns the percentage of sequence identity between two sequences.
+    Discard positions with gaps in one or both sequences. See tests.
+</p>
+
+<!--
+<h2>Hint</h2>
+<p> </p>
+<pre><code>
+</code></pre>
+-->
+
+<h2>Tests</h2>
+  <pre>
+    >>> seq_identity("FASTCAT", "FATCAT")
+
+    >>> seq_identity("FASTCAT", "FASTCAT")
+    100.0
+    >>> seq_identity("FASTCAT", "FASTRAT")
+    85.7
+    >>> seq_identity("-FASTCAT", "-FASTRAT")
+    85.7
+    >>> seq_identity("FASTCAT", "FA-TCAT")
+    100.0
+    >>> seq_identity("FASTCAT", "FAT-CAT")
+    83.3
+    >>> seq_identity("AFASTCAT", "-FASTRAT")
+    85.7
+    >>> seq_identity("FASTCAT", "AAAAAAA")
+    28.6
+    >>> seq_identity("FASTCAT", "AFAAAFA")
+    0.0
+<!--
+  <h3>Related exercises:</h3>
+  <p><a href="count_matches_stars.html">count_matches_stars</a></p>
+  -->
+</body>
+</html>

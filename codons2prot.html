@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Exercise</title>
+  <style>
+    p {
+        font-size: 18px
+    }
+    pre {
+        font-size: 16px
+    }    
+  </style>
+</head>
+
+
+<body>
+  <h1>codons2prot</h1>
+  
+  <h2>Description</h2>
+  <p> Write a script that reads a genetic code from a text file and makes the translation of RNA triplets into protein sequences. 
+
+    You will need two functions: <br>1) <b>read_gencode()</b>: should read the genetic code file and return a dictionary. You can find the standard genetic code <a href="gencode.txt">here</a>.
+    <br>2) <b>codons2prot()</b>: should take a list of triplets and return a string with the protein sequence.       
+</p>
+
+  <h2>Tests</h2>
+  <pre>
+    >>> len(read_gencode("gencode.txt"))
+    64
+    >>> read_gencode("gencode.txt")['AAA']
+    'K'
+    
+    >>> codons2prot(["AUU", "CAU", "AUC"])
+    'IHI'
+    >>> codons2prot(["ATT", "CAT", "ATC"])
+    'IHI'
+    >>> codons2prot(["CGA", "GUG", "UAA"])
+    'RV/'
+</pre >
+
+  <hr>
+
+  <br>
+  <h3>Related exercises:</h3>
+  <p><a href="rna_to_prot.html">rna_to_prot</a></p>
+</body>
+</html>

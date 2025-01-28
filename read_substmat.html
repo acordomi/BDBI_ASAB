@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Exercise</title>
+  <style>
+    p {
+        font-size: 18px
+    }
+    pre {
+        font-size: 16px
+    }
+    .long {
+        overflow-wrap: break-word;
+    }    
+  </style>
+</head>
+
+
+<body>
+  <h1>read_substmat</h1>
+  
+  <h2>Description</h2>
+  <p> Create a function read_substmat() that takes as input the name of a file with a substitution matrix and returns a dictionary 
+    of dictionaries with the substitution scores. Files provided should have the same format of this <a href="blosum62_full.mat">BLOSUM62 matrix</a>, 
+    which is required in the tests.
+</p>
+<!--
+
+<h2>Hint</h2>
+<pre><code>
+</code></pre>
+-->
+
+<h2>Tests</h2>
+  <pre>
+    >>> smat = read_substmat('blosum62_full.mat')
+    >>> smat['W']['W']
+    11
+    >>> smat['W']['A']
+    -3
+    >>> smat['A']['W']
+    -3
+    >>> len(smat)
+    20
+    >>> len(smat['L'])
+    20
+</pre >
+
+  <hr>
+
+  <br>
+<!--
+  <h3>Related exercises:</h3>
+  <p><a href="count_matches_stars.html">count_matches_stars</a></p>
+  -->
+</body>
+</html>

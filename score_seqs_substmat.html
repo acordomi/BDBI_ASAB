@@ -20,7 +20,7 @@
   <h1>score_seqs_substmat</h1>
   
   <h2>Description</h2>
-  <p> Modify the function <b>score_seqs()</b> to consider a substitution matrix instead of match/mismatch scores.
+  <p> Modify the function <b>score_seqs()</b> in <b><a=href="score_seqs_gap.html">score_seqs_gap</a></b> to consider a substitution matrix instead of match/mismatch scores.
     
 </p>
 
@@ -43,13 +43,12 @@ subst_mat = substitution_matrices.load("BLOSUM62")
     34
     >>> score_seqs("THEFA TCAT", "THEFASTCAT", 1, "BLOSUM62")
     52
-    >>> score_seqs("THEFASTCAT", "THE", 1, "BLOSSUM62")
+    >>> score_seqs("THEFASTCAT", "THE", 1, "BLOSUM62")
     0
 </pre >
 
   <hr>
 
-  <p><a href="index.html">Back to index</a></p>
   <br>
   <!--
   <h3>Related exercises:</h3>

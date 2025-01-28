@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Exercise</title>
+  <style>
+    p {
+        font-size: 18px
+    }
+    pre {
+        font-size: 16px
+    }
+    .long {
+        overflow-wrap: break-word;
+    }
+  </style>
+</head>
+
+
+<body>
+  <h1>gc_content_cds</h1>
+  
+  <h2>Description</h2>
+  <p>The file <a href="brca1_cds.dna">brca1_cds.dna</a> contains the coding sequence of BRCA1 (each line corresponds to a coding exon). 
+    Write a function that numerates the coding exons (starting at 1), computes the GC content of each, and returns a list of tuples (exon numbers, GC content), sorted by GC 
+    from largest to smallest GC content (see tests).
+  
+
+
+
+
+</p>
+
+  <h2>Tests</h2>
+  <pre>
+  >>> gc_conent_cds("brca1_cds.dna")[:5]
+  [(22, 57.14), (21, 54.84), (19, 51.79), (10, 48.89), (20, 48.0)]
+  >>> gc_conent_cds("brca1_cds.dna")[-5:]
+  [(1, 37.04), (5, 36.88), (3, 36.71), (7, 36.17), (15, 34.83)]
+</pre>
+
+  <hr>
+
+  <br>
+  <!--
+  <h3>Related exercises:</h3>
+  <p><a href="which_seqtype.html">which_seqtype</a></p>
+  -->
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Exercise</title>
+  <style>
+    p {
+        font-size: 18px
+    }
+    pre {
+        font-size: 16px
+    }
+    .long {
+        overflow-wrap: break-word;
+    }    
+  </style>
+</head>
+
+
+<body>
+  <h1>seq_profile</h1>
+  
+  <h2>Description</h2>
+  <p> Create a function that computes a sequence profile (position-specific scoring matrix) from a list of seqs. The function only needs to work with DNA sequences with bases (A, C, G, T). 
+    The profile is just a list with the number of times each base appears in each position of the seqs. See tests.
+</p>
+
+<!--
+<h2>Hint</h2>
+<p> </p>
+<pre><code>
+</code></pre>
+-->
+
+<h2>Tests</h2>
+  <pre>
+    >>> seq_profile([])
+
+    >>> seq_profile(["AC", "A"])
+
+    >>> seq_profile(["A", "A"])
+    {'A': [2], 'C': [0], 'G': [0], 'T': [0]}
+    >>> seq_profile(["AC", "AC"])
+    {'A': [2, 0], 'C': [0, 2], 'G': [0, 0], 'T': [0, 0]}
+    >>> seq_profile(["ACG", "ACC", "TCG", "TTG"])
+    {'A': [2, 0, 0], 'C': [0, 3, 1], 'G': [0, 0, 3], 'T': [2, 1, 0]}
+    >>> seq_profile(["ACGT", "ATCG", "TCGA", "TTGT"])
+    {'A': [2, 0, 0, 1], 'C': [0, 2, 1, 0], 'G': [0, 0, 3, 1], 'T': [2, 2, 0, 2]}
+  </pre>
+<!--
+  <h3>Related exercises:</h3>
+  <p><a href="count_matches_stars.html">count_matches_stars</a></p>
+  -->
+</body>
+</html>

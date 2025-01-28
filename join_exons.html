@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Exercise</title>
+  <style>
+    p {
+        font-size: 18px
+    }
+    pre {
+        font-size: 16px
+    }
+    .long {
+        overflow-wrap: break-word;
+    }
+  </style>
+</head>
+
+
+<body>
+  <h1>join_exons</h1>
+  
+  <h2>Description</h2>
+  <p>The file <a href="brca1_cds.dna">brca1_cds.dna</a> contains the coding sequence of BRCA1 (each line corresponds to a coding exon). 
+  Reconstruct the complete CDS in a single string in RNA alphabet and uppercase letters.
+  For this you will need to create a <b>join_exons()</b> function that returns the merged RNA string.
+  When you are done, use the function to get the CDS from the file <a href="brca1_cds.dna">brca1_cds.dna</a> and save the resulting RNA in
+   a new file in chunks of 80 characters per line.
+</p>
+
+
+  <h2>Tests</h2>
+  <pre>
+    >>> join_exons("brca1_cds.dna")[2000:2050]
+    'ACUCAUGGAAGGUAAAGAACCUGCAACUGGAGCCAAGAAGAGUAACAAGC'
+    >>> join_exons("brca1_cds.dna")[-2050:-2000]
+    'CCAGAAAGGAGAGCUUAGCAGGAGUCCUAGCCCUUUCACCCAUACACAUU'
+  </pre>
+
+  
+<!--
+  <hr>
+  <br>
+  <h3>Related exercises:</h3>
+  <p><a href="gc_content_cds.html">gc_content_cds</a></p>
+-->
+</body>
+</html>

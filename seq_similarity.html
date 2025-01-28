@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Exercise</title>
+  <style>
+    p {
+        font-size: 18px
+    }
+    pre {
+        font-size: 16px
+    }
+    .long {
+        overflow-wrap: break-word;
+    }    
+  </style>
+</head>
+
+
+<body>
+  <h1>seq_similarity</h1>
+  
+  <h2>Description</h2>
+  <p> Create a function that returns the percentage of sequence similarity between two sequences. Discard positions with gaps in one or both sequences. 
+    Two residues are considered similar when it's substitution score is > 0. Use a BLOSUM62 substitution matrix.
+    See tests.
+</p>
+
+<!--
+<h2>Hint</h2>
+<p> </p>
+<pre><code>
+</code></pre>
+-->
+
+<h2>Tests</h2>
+  <pre>
+    >>> seq_similarity("FASTCAT", "FATCAT")
+
+    >>> seq_similarity("FASTCAT", "FASTCAT")
+    100.0
+    >>> seq_similarity("FASTCAT", "FASTRAT")
+    85.7
+    >>> seq_similarity("-FASTCAT", "-FASTRAT")
+    85.7
+    >>> seq_similarity("FASTCAT", "FA-TCAT")
+    100.0
+    >>> seq_similarity("FASTCAT", "FAT-CAT")
+    100.0
+    >>> seq_similarity("AFASTCAT", "-FASTRAT")
+    85.7
+    >>> seq_similarity("FASTCAT", "AAAAAAA")
+    42.9
+    >>> seq_similarity("FASTCAT", "AFAAAFA")
+    14.3
+
+
+  </pre>
+<!--
+  <h3>Related exercises:</h3>
+  <p><a href="count_matches_stars.html">count_matches_stars</a></p>
+  -->
+</body>
+</html>
